@@ -1,11 +1,12 @@
 ********************************
-*         HBD PROGRAM 1        *
+*           HBD-6502           *
 ********************************
 
 	ORG	$300
+
 HOME	EQU	$FC58
 BELL	EQU	$FBDD
-TRIPS	EQU	#$3B
+TRIPS	EQU	$3B
 
 START	JSR	HOME
 	LDX	TRIPS
