@@ -1,0 +1,20 @@
+********************************
+*   AL06-KEYBOARD PROGRAM 1B   *
+********************************
+
+	ORG	$8000
+
+KYBD	EQU	$C000
+STROBE	EQU	$C010
+COUT	EQU	$FDED
+HOME	EQU	$FC58
+
+START	JSR	HOME
+LOOP	LDA	KYBD
+	CMP	#$80
+	BCC	LOOP
+	STA	STROBE
+	JSR	COUT
+	JMP	LOOP
+
+* INFINITE LOOP
